@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Prompt:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    font-size: 10px;
+    font-family: 'Dosis', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* I USED GRID HERE BECAUSE ITS EASIER TO USE */
+.grid-container{
+    display: grid;
+    grid-template-areas: " home home home"
+                         "btn btn btn"
+                         "nav img abt"
+                         "nav exe proj"
+                         "nav exe proj"
+                         "con con con"
+                         "copy copy copy";
+}
+/* CREATED A PARENT CONTAINER FOR THE GRID */
+.container {
+    display: grid;
+    grid-area: home;
+    height: 100vh;
+    width: 100%;
+   
+}
+/* FIRST SECTION */
+#sekcija {
+    display: grid;
+    grid-area: home;
+    background-image: url(../images/1905.i126.005_programmer\ work.jpg);
+    background-size: cover;
+    background-position: top;
+    z-index: 1;
+}
+
+#sekcija::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#sekcija h1 {
+    padding-top: 20%;
+    font-size: 10rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1.5s;
+}
+a {
+    text-decoration: none;
+
+}
+
+.cta {
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3 ease;
+    transition-property: color;
+}
+.gumb-centar{
+    margin: 20px;
+}
+.gumb-container{
+    display: grid;
+    grid-area: btn;
+    margin-top: 40%;
+    margin-left:28%;
+    /* margin-right: 28%; */
+}
+
+.cta:hover {
+    color: white;
+    background-color: rgb(156, 133, 3);
+}
+
+#sekcija h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20%;
+    height: 35%;
+    width: 0%;
+    background-color: rgb(255, 217, 0);
+    animation: prevlaka 1s ease;
+    animation-delay: 1s;
+}
+
+.about{
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-area: abt;
+    font-size: 3.4rem;
+    margin-left: 10%;
+    margin-right: 20%;
+    padding: 19px;
+   margin-top: 17%;
+   margin-bottom: 22%;
+    background-color: rgba(0, 0, 0, 0.103);
+    border-radius: 10px;
+}
+.tata{
+    position: relative;
+    padding: 1%;
+}
+.img{
+    display: grid;
+    grid-area: img;
+    margin-top: 10%;
+    margin-right: 2%;
+
+}
+.border{
+    border-top: 3px gold;
+    border-left: 6px rgb(255, 217, 0);
+    border-style:outset;
+    padding: 1px;
+}
+.img img{
+    width: 50%;
+    border-radius: 5px;
+    margin-left: 40%;
+}
+.Exercise{
+    font-family: 'Lato',sans-serif;
+    font-weight: 500;
+display: grid;
+grid-area: exe;
+margin-top: 20%;
+font-size: 5em;
+padding-left: 50px;
+
+}
+.Exercise ul{
+    display: inline;
+    list-style: none;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+.Exercise ul li{
+    padding: 20px;
+}
+.Exercise ul li a{
+    color: black;
+    
+}
+.Exercise ul li a:hover{
+    color: rgb(255, 161, 55); 
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 15px;
+    z-index: -1;
+}
+.active{
+    color: rgb(255, 161, 55); 
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 15px;
+    font-size: 1.05em;
+    z-index: 1;
+}
+.Projects{
+    font-family: 'Lato',sans-serif;
+    font-weight: 500;
+    display: grid;
+    grid-area: proj;
+    margin-top: 17%;
+    font-size: 5em;
+    margin-right: 25%;
+    justify-content: start;
+    text-align: start;
+    
+    }
+    .Projects ul{
+        display: inline;
+        list-style: none;
+        font-weight: bolder;
+        text-align: center;
+        
+    }
+    .Projects ul li{
+        padding: 50px;
+    }
+    .Projects ul li a{
+        color: black;
+        
+    }
+    .Projects ul li a:hover{
+        color: rgb(255, 161, 55); 
+        background-color: rgba(0, 0, 0, 0.082);
+        border-radius: 15px;
+        z-index: -1;
+    }
+
+
+
+
+
+    /* ************************ Icons ************ */
+.icon-bar {
+    display: grid;
+    grid-area: nav;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 25px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .instagram {
+    background: #ee0553;
+    color: white;
+  }
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .copy{ 
+      margin-top: 3%;
+      display: grid;
+      grid-area: copy;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      font-size: 25px;
+      padding: 25px;
+  }
+.contact{
+    display: grid;
+    grid-area: con;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-left: 20%;
+    font-family: 'Lato',sans-serif;
+}
+.contact a{
+    color: #000;
+}
+.contact a:hover{
+    color: rgb(255, 161, 55); 
+}
+ 
+  
+
+
+
+/* ******************** KEY FRAMES****************** */
+
+@keyframes prevlaka {
+    50% {
+        margin-left: 46%;
+        width: 20%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
